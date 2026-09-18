@@ -29,6 +29,10 @@ public :
         size++;
     }
     void pop(){
+        if(top == NULL){
+            cout<<"Stack underflow"<<endl;
+            return;
+        }
         Node* temp = top;
         top = top->next;
         delete(temp);
